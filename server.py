@@ -6,7 +6,7 @@ import concurrent.futures
 class Greeter(greeter_pb2_grpc.GreeterServicer):
     def SayHello(self, request, context):
         response = greeter_pb2.HelloReply(message=f"Hello, {request.name}!")
-        print(request)
+        print("Printing the request in console for us to see",request)
         return response
 
 def serve():
